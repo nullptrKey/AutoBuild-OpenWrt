@@ -66,6 +66,7 @@ jobs:
         git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
         cd openwrt
         echo "src-git ssrp https://github.com/fw876/helloworld.git" >> ./feeds.conf.default
+        echo "src-git kenzo https://github.com/kenzok8/openwrt-packages" >> ./feeds.conf.default
         
     - name: Update & Install feeds
       working-directory: ./openwrt
@@ -103,7 +104,7 @@ jobs:
     - name: Build firmware
       working-directory: ./openwrt
       run: |
-        echo -e "$(nproc) thread build"
+        echo -e "$(nproc) thread build."
         make -j$(nproc) V=s
 
     - name : Upload artifact
