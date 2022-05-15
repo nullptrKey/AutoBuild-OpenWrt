@@ -15,6 +15,3 @@ sed -i 's/$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF.//g' openwrt/package/lean/default-se
 #rm openwrt/package/lean/luci-theme-argon -rf
 sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
 sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
-git pull
-./scripts/feeds update -a
-./scripts/feeds install -a
