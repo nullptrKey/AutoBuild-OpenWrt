@@ -5,7 +5,7 @@
 # Youtube Channel: https://goo.gl/fvkdwm 
 #=================================================
 
-name: Build_Redmi_AC2100
+name: Build_HATLab
 
 on: 
   release:
@@ -77,9 +77,9 @@ jobs:
     #  run: |
     #    git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon-jerrykuku   
   
-    - name: Configuration Customization - Build_Redmi_AC2100
+    - name: Configuration Customization - Build_HATLab
       env:
-        CONFIG_FILE: 'redmi_ac2100.config'
+        CONFIG_FILE: 'HATLab-GateBoard-One.config'
       run: |
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
         chmod +x ./customize.sh && ./customize.sh
